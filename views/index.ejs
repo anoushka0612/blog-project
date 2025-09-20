@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="container"> 
+        <div class="maincontent">
+            <div class="homepage">
+                <h1>Your Very Own Blogging Library</h1>
+                <a href="/create"><button id="createbtn" class="btn btn-dark rounded-pill px-3">Create New Blog</button></a>   
+            </div>
+            <% Content.forEach((post)=> {%>
+                <div class="homepage posts">
+                    <div>
+                        <h3><a href="posts/<%=post.title%>"><%= post.title %></a></h3>
+                        <p><%= post.genre %></p>
+                    </div>
+                    <div class="homebtns">
+                        <form action="/posts/edit/<%= post.title %>" method="get">
+                            <a href="posts/edit/<%= post.title %>"><button type="submit" class="btn btn-dark rounded-pill px-3">Edit</button></a>
+                        </form>
+                        <form action="/posts/delete/<%= post.title %>" method="post">
+                            <button type="submit" class="btn btn-dark rounded-pill px-3">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            <% }); %>
+            
+        </div> 
+    </div>   
+    <div>
+        <%- include("partials/footer.ejs") %>
+    </div>
