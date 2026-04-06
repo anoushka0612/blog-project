@@ -1,4 +1,4 @@
-html{
+/*html{
     overflow: hidden;
 }   
 body{
@@ -106,5 +106,159 @@ label{
       flex-direction: column;
       padding: 0;
       margin: 0;
+    }
+  }
+*/
+/* Reset */
+
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #eef2f3, #ffffff);
+  }
+  
+  /* Main content should expand */
+  .container {
+    flex: 1;
+  }
+  
+  /* Header section */
+  .homepage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .homepage h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #222;
+  }
+  /* Create button */
+  #createbtn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #createbtn:hover {
+    transform: scale(1.05);
+  }
+  /* Post card */
+  .posts {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-left: 5px solid #667eea;
+    transition: 0.3s;
+  }
+  
+  .posts:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+  /* Title */
+  .posts h3 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .posts h3 a:hover {
+    color: #667eea;
+  }
+  
+  /* Genre */
+  .posts p {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+  }
+  /* Buttons */
+  .homebtns button {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    font-size: 13px;
+    transition: 0.3s;
+  }
+  
+  /* Edit */
+  .homebtns button:first-child {
+    background: #667eea;
+    color: white;
+  }
+  
+  /* Delete */
+  .homebtns button:last-child {
+    background: #ff4d4d;
+    color: white;
+  }
+  
+  .homebtns button:hover {
+    opacity: 0.85;
+  }
+  /* Inputs */
+  input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  /* Labels */
+  label {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+    color: white;
+  }
+  .container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 25px;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .homepage {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+  
+    .posts {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .homebtns {
+      width: 100%;
+      justify-content: flex-start;
     }
   }

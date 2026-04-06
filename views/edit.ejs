@@ -3,7 +3,7 @@
 <div class="container"> 
     <div>
     <h1>Compose</h1>
-        <form action="/posts/edit/:<%= post.title %>" method="post">
+        <form action="/posts/edit/<%= post.id %>" method="post">
             <label for="title">Title</label><br>
             <input type="text" id="title" name="title" value="<%= post.title %>"><br>
             <label for="Genre">Genre</label><br>

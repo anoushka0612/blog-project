@@ -1,0 +1,9 @@
+DB name - blogdb;
+--CREATING TABLE--
+CREATE TABLE posts(
+	id SERIAL PRIMARY KEY,
+	title TEXT,
+	genre TEXT,
+	body TEXT,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
